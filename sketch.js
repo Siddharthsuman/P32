@@ -71,7 +71,7 @@ B9=new Box(1180,160,50,80);
 }
  
 function draw(){
-if(backgroundImg)
+if (backgroundImg)
 background(backgroundImg)
 push();
 fill(255, 255, 255)
@@ -108,13 +108,7 @@ b4.display();
 b5.display();
 b6.display();
 b7.display();
-b1.score();
-b2.score();
-b3.score();
-b4.score();
-b5.score();
-b6.score();
-b7.score();
+
 pop();
 push();
 fill(85, 124, 224)
@@ -123,25 +117,19 @@ b9.display();
 b10.display();
 b11.display();
 b12.display();
-b8.score();
-b9.score();
-b10.score();
-b11.score();
-b12.score();
+
 pop();
 push();
 fill(195, 255, 0)
 b13.display();
 b14.display();
 b15.display();
-b13.score();
-b14.score();
-b15.score();
+
 pop()
 push()
 fill(239, 117, 150)
 b16.display();
-b16.score();
+
 pop();
 push();
 fill(255, 178, 79);
@@ -150,32 +138,45 @@ B2.display();
 B3.display();
 B4.display();
 B5.display();
-B1.score();
-B2.score();
-B3.score();
-B4.score();
-B5.score();
+
 pop();
 push();
 fill(252, 5, 108);
 B6.display();
 B7.display();
 B8.display();
-B6.score();
-B7.score();
-B8.score();
+
 pop();
 push();
 fill(238, 255, 130)
 B9.display();
-B9.score();
+
 pop();
-
-
-
-
-
-
+b1.score();
+b2.score();
+b3.score();
+b4.score();
+b5.score();
+b6.score();
+b7.score();
+b8.score();
+b9.score();
+b10.score();
+b11.score();
+b12.score();
+b13.score();
+b14.score();
+b15.score();
+b16.score();
+B1.score();
+B2.score();
+B3.score();
+B4.score();
+B5.score();
+B6.score();
+B7.score();
+B8.score();
+B9.score();
 drawSprites();
 }
 
@@ -194,20 +195,20 @@ function keyPressed(){
     }
     }
  async function getBackgroundImg(){
-    var response=await fetch("http://worldtimeapi.org/api/timezone/Asia/KolKata")
+    var response=await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
     var responseJSON = await response.json();
     var datetime= responseJSON.datetime
      var hour=datetime.slice(11,13);
   if(hour>=06 && hour<=11){
    backgroundImg=loadImage("morning.jpg")
      }
-     if(hour>=12&& hour<=16){
+     if(hour>=12 && hour<=16){
          backgroundImg=loadImage("afternoon.png")
      }
      if (hour>=17 && hour<=19){
          backgroundImg=loadImage("evening.png")
      }
-     if (hour>=20&& hour<=05){
+     if (hour>=20 && hour<=05){
    backgroundImg=loadImage("night.jpg")
      }
  }
